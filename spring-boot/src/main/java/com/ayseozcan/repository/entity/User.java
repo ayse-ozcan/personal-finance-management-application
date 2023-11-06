@@ -8,6 +8,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.experimental.SuperBuilder;
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 @Data
@@ -19,6 +20,7 @@ public class User extends BaseEntity {
     @Id
     private String id;
     private String username;
+    @Indexed(unique = true)
     private String email;
     private String password;
     private String name;
@@ -27,5 +29,5 @@ public class User extends BaseEntity {
     @Builder.Default
     private EStatus eStatus = EStatus.PENDING;
     @Builder.Default
-    private ERole eRole = ERole.USER;
+    private ERole role = ERole.USER;
 }
