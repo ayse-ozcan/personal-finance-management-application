@@ -15,7 +15,7 @@ public class JwtProvider {
     String issuer = "financeManagement";
 
     private final String secretKey = "secretKey";
-    private final long exDate = 1000L * 60 * 5;
+    private final long exDate = 1000L * 60 * 60;
 
     public Optional<String> createToken(String id) {
         try {

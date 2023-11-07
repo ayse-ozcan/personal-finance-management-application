@@ -1,7 +1,6 @@
 package com.ayseozcan.repository.entity;
 
 import com.ayseozcan.repository.enums.ERole;
-import com.ayseozcan.repository.enums.EStatus;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -19,6 +18,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class User extends BaseEntity {
     @Id
     private String id;
+    @Indexed(unique = true)
     private String username;
     @Indexed(unique = true)
     private String email;
@@ -26,8 +26,6 @@ public class User extends BaseEntity {
     private String name;
     private String surname;
     private String profilePicture;
-    @Builder.Default
-    private EStatus eStatus = EStatus.PENDING;
     @Builder.Default
     private ERole role = ERole.USER;
 }

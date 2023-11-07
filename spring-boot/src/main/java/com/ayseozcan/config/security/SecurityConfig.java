@@ -14,17 +14,17 @@ public class SecurityConfig {
     JwtFilter getJwtFilter() {
         return new JwtFilter();
     }
-
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) throws Exception {
-        httpSecurity
-                .cors().and().csrf().disable()
-                .authorizeRequests()
-                .antMatchers(
+        httpSecurity.authorizeRequests().antMatchers(
+                        "/v3/api-docs/**",
                         "/swagger-ui/**",
-                        "/swagger-ui.html",
-                        "/v3/api-docs/**"
-                ).permitAll().anyRequest().authenticated();
+                        "/api/v1/user/**",
+                        "api/v1/income/**",
+                        "api/v1/expense/**",
+                        "api/v1/budget/**").permitAll()
+                .and()
+                .cors().and().csrf().disable();
         httpSecurity.addFilterBefore(getJwtFilter(), UsernamePasswordAuthenticationFilter.class);
         return httpSecurity.build();
     }
