@@ -1,16 +1,16 @@
 ## Personal Finance Management Application
 ## Table of contents
 1. SPRING BOOT
-- [About This Project](https://github.com/ayse-ozcan/personal-finance-management-application/new/main?readme=1#about-this-project)
-- [Features](https://github.com/ayse-ozcan/personal-finance-management-application/new/main?readme=1#features)
-- [Usage](https://github.com/ayse-ozcan/personal-finance-management-application/new/main?readme=1#usage)
-- [Scripts](https://github.com/ayse-ozcan/personal-finance-management-application/new/main?readme=1#scripts)
-- [Folder Structure](https://github.com/ayse-ozcan/personal-finance-management-application/new/main?readme=1#folder-structure)
+- [About This Project](https://github.com/ayse-ozcan/personal-finance-management-application/tree/main#about-this-project)
+- [Features](https://github.com/ayse-ozcan/personal-finance-management-application/tree/main#features)
+- [Usage](https://github.com/ayse-ozcan/personal-finance-management-application/tree/main#usage)
+- [Scripts](https://github.com/ayse-ozcan/personal-finance-management-application/tree/main#scripts)
+- [Folder Structure](https://github.com/ayse-ozcan/personal-finance-management-application/tree/main#folder-structure)
 2. REACT
-- [Pre-requisites](https://github.com/ayse-ozcan/personal-finance-management-application/new/main?readme=1#pre-requisites)
-- [Getting started](https://github.com/ayse-ozcan/personal-finance-management-application/new/main?readme=1#getting-started)
-- [Technologies](https://github.com/ayse-ozcan/personal-finance-management-application/new/main?readme=1#technologies)
-- [Folder Structure](https://github.com/ayse-ozcan/personal-finance-management-application/new/main?readme=1#folder-structure-1)
+- [Pre-requisites](https://github.com/ayse-ozcan/personal-finance-management-application/tree/main#pre-requisites)
+- [Getting started](https://github.com/ayse-ozcan/personal-finance-management-application/tree/main#getting-started)
+- [Technologies](https://github.com/ayse-ozcan/personal-finance-management-application/tree/main#technologies)
+- [Folder Structure](https://github.com/ayse-ozcan/personal-finance-management-application/tree/main#folder-structure-1)
 ### About This Project
 This project is a personal budget management application developed in Java, designed to streamline the process of tracking income and expenses while providing a comprehensive overview of the total budget.
 
