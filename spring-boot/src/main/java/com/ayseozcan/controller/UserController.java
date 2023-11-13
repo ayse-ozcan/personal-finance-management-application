@@ -22,26 +22,31 @@ public class UserController {
     private final UserService userService;
 
     @PostMapping(REGISTER)
+    @CrossOrigin("*")
     public ResponseEntity<Boolean> register(@RequestBody @Valid RegisterRequestDto dto) {
         return ResponseEntity.ok(userService.register(dto));
     }
 
     @PostMapping(LOGIN)
+    @CrossOrigin("*")
     public ResponseEntity<UserLoginResponseDto> login(@RequestBody @Valid LoginRequestDto dto) {
         return ResponseEntity.ok(userService.login(dto));
     }
 
     @PutMapping(CHANGE_PASSWORD)
+    @CrossOrigin("*")
     public ResponseEntity<Boolean> changePassword(@RequestBody @Valid ChangePasswordRequestDto dto) {
         return ResponseEntity.ok(userService.changePassword(dto));
     }
 
     @GetMapping(FIND_BY_ID + "/{token}")
+    @CrossOrigin("*")
     public ResponseEntity<FindUserResponseDto> findUserById(@PathVariable @Valid String token) {
         return ResponseEntity.ok(userService.findUserById(token));
     }
 
     @PutMapping(UPDATE)
+    @CrossOrigin("*")
     public ResponseEntity<Boolean> update(@RequestBody @Valid UserUpdateRequestDto dto) {
         return ResponseEntity.ok(userService.update(dto));
     }

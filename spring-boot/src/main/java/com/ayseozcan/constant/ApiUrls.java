@@ -10,5 +10,10 @@ public class ApiUrls {
     public static final String LOGIN = "/login";
     public static final String CHANGE_PASSWORD = "/change-password";
     public static final String FIND_BY_ID = "/find-by-id";
-    public static final String UPDATE = "/update-user";
+    public static final String UPDATE = "/update";
+    public static final String SAVE = "/save";
+    public static final String DELETE = "/delete";
+    public static final String FIND_SUM_OF_EXPENSE = "/find-sum-of-expense";
+    public static final String FIND_SUM_OF_INCOME = "/find-sum-of-income";
+    public static final String CALCULATE_BUDGET = "/calculate-budget";
 }

@@ -14,15 +14,16 @@ public class SecurityConfig {
     JwtFilter getJwtFilter() {
         return new JwtFilter();
     }
+
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) throws Exception {
         httpSecurity.authorizeRequests().antMatchers(
                         "/v3/api-docs/**",
                         "/swagger-ui/**",
                         "/api/v1/user/**",
-                        "api/v1/income/**",
-                        "api/v1/expense/**",
-                        "api/v1/budget/**").permitAll()
+                        "/api/v1/income/**",
+                        "/api/v1/expense/**",
+                        "/api/v1/budget/**").permitAll()
                 .and()
                 .cors().and().csrf().disable();
         httpSecurity.addFilterBefore(getJwtFilter(), UsernamePasswordAuthenticationFilter.class);

@@ -1,5 +1,10 @@
 ## Personal Finance Management Application
 ### About This Project
+This project is a personal budget management application developed in Java, designed to streamline the process of tracking income and expenses while providing a comprehensive overview of the total budget.
+
+#### Features:
+- **Income and Expense Tracking:** Users can input their income and expenses, allowing for a detailed record of financial transactions.
+- **Budget Calculation:** The application dynamically calculates the overall budget by considering both income and expenses, providing users with a clear snapshot of their financial status.
 ### Usage
 You will need to have Gradle and JDK 8 or higher. The recommended way to run the sample applications is with IDEs like IntelliJ IDEA or Eclipse. You will also need to run MongoDB, in Docker container, so you must have Docker installed on your local machine.
 ### Scripts
@@ -15,7 +20,12 @@ docker run -d -e MONGO_INITDB_ROOT_USERNAME=mongoadmin -e MONGO_INITDB_ROOT_PASS
     │   ├── java
     │   │   └── com.ayseozcan
     │   │       ├── config
-    │   │       │   └── security
+    │   │       │   ├── security
+    │   │       │   │   ├── JwtFilter
+    │   │       │   │   ├── JwtUserDetails
+    │   │       │   │   └── SecurityConfig
+    │   │       │   └── swagger
+    │   │       │       └── SwaggerConfig
     │   │       ├── constant
     │   │       │   └── ApiUrls
     │   │       ├── controller
@@ -25,13 +35,30 @@ docker run -d -e MONGO_INITDB_ROOT_USERNAME=mongoadmin -e MONGO_INITDB_ROOT_PASS
     │   │       │   └── UserController    
     │   │       ├── dto
     │   │       │   ├── request
-    │   │       │   └── response       
+    │   │       │   │   ├── ChangePasswordRequestDto
+    │   │       │   │   ├── ExpenseSaveRequestDto
+    │   │       │   │   ├── ExpenseUpdateRequestDto
+    │   │       │   │   ├── IncomeSaveRequestDto
+    │   │       │   │   ├── IncomeUpdateRequestDto
+    │   │       │   │   ├── LoginRequestDto
+    │   │       │   │   ├── RegisterRequestDto
+    │   │       │   │   └── UserUpdateRequestDto 
+    │   │       │   └── response
+    │   │       │       ├── FindExpenseResponseDto
+    │   │       │       ├── FindIncomeResponseDto
+    │   │       │       ├── FindUserResponseDto
+    │   │       │       ├── GetExpenseAmountResponseDto
+    │   │       │       ├── GetIncomeAmountResponseDto
+    │   │       │       └── UserLoginResponseDto          
     │   │       ├── exception
     │   │       │   ├── ErrorMessage
     │   │       │   ├── ErrorType
     │   │       │   ├── FinanceManagementException
     │   │       │   └── GlobalExceptionHandler      
     │   │       ├── mapper
+    │   │       │   ├── IExpenseMapper 
+    │   │       │   ├── IIncomeMapper
+    │   │       │   └── IUserMapper 
     │   │       ├── repository
     │   │       │   ├── entity
     │   │       │   │   ├── BaseEntity 
@@ -40,8 +67,7 @@ docker run -d -e MONGO_INITDB_ROOT_USERNAME=mongoadmin -e MONGO_INITDB_ROOT_PASS
     │   │       │   │   ├── Income
     │   │       │   │   └── User    
     │   │       │   ├── enums
-    │   │       │   │   ├── ERole
-    │   │       │   │   └── EStatus      
+    │   │       │   │   └── ERole      
     │   │       │   ├── IBudgetRepository
     │   │       │   ├── IExpenseRepository
     │   │       │   ├── IIncomeRepository
@@ -53,6 +79,7 @@ docker run -d -e MONGO_INITDB_ROOT_USERNAME=mongoadmin -e MONGO_INITDB_ROOT_PASS
     │   │       │   └── UserService   
     │   │       ├── utility 
     │   │       │   ├── IService
+    │   │       │   ├── JwtProvider
     │   │       │   └── ServiceManager  
     │   │       └── FinanceManagementApplication
     │   └── resources

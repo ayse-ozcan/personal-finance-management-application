@@ -87,7 +87,7 @@ public class UserService extends ServiceManager<User, String> {
         if (optionalUser.isEmpty()) {
             throw new FinanceManagementException(ErrorType.USER_NOT_FOUND);
         }
-        update(userMapper.fromUserUpdateRequestDtoToUser(dto,optionalUser.get()));
+        update(userMapper.fromUserUpdateRequestDtoToUser(dto, optionalUser.get()));
         return true;
     }
 }

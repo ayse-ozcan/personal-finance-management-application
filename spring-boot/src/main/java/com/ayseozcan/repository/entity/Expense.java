@@ -14,7 +14,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Document
 public class Expense extends BaseEntity {
     @Id
-    private String id;
+    private String expenseId;
     private String userId;
     private double amount;
     private String description;
