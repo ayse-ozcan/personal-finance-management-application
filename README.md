@@ -141,10 +141,16 @@ Material UI is an open-source React component library that implements Google's M
     │   ├── manifest.json
     │   └── robots.txt
     ├── src
+    │   ├── assets
+    │   │   └── img
     │   ├── components
     │   │   ├── Footer.js
     │   │   └── Header.js
     │   ├── pages
+    │   │   ├── change_password
+    │   │   │   └── ChangePassword.js
+    │   │   ├── home
+    │   │   │   └── HomePage.js
     │   │   ├── profile
     │   │   │   └── Profile.js
     │   │   ├── sign-in
