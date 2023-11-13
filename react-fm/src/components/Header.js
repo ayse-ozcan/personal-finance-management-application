@@ -55,6 +55,7 @@ function Header() {
               variant="h6"
               noWrap
               component="a"
+              onClick={() => handleNavigation("/home")}
               sx={{
                 mr: 4,
                 display: { xs: "none", md: "flex" },
@@ -93,6 +94,7 @@ function Header() {
               variant="h6"
               noWrap
               component="a"
+              onClick={() => handleNavigation("/change_password")}
               sx={{
                 mr: 4,
                 display: { xs: "none", md: "flex" },

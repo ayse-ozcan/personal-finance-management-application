@@ -14,23 +14,6 @@ import axios from "axios";
 import { Link as RouterLink, useNavigate } from "react-router-dom";
 import Footer from "../../components/Footer";
 
-function Copyright(props) {
-  return (
-    <Typography
-      variant="body2"
-      color="text.secondary"
-      align="center"
-      {...props}
-    >
-      {"Copyright © "}
-      <Link color="inherit" href="https://ayseozcan.com/projects">
-        AO
-      </Link>{" "}
-      {new Date().getFullYear()}
-      {"."}
-    </Typography>
-  );
-}
 const defaultTheme = createTheme();
 
 const SignIn = () => {
